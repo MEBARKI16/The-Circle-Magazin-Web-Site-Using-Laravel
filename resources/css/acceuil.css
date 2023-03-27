@@ -1,0 +1,18 @@
+.bouton {
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: none;
+    background-color: #4caf50; /* Couleur de fond */
+    color: white; /* Couleur de texte */
+    padding: 10px 20px; /* Espacement intérieur */
+}
+
+.bouton:hover {
+    background-color: #3e8e41; /* Couleur de fond au survol */
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
