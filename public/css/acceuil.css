@@ -4,20 +4,18 @@ body {
 }
 /* Utilisation de la propriété font-family pour changer la police */
 
-.bt {
-    width: 250px;
-}
 main {
     border: 1px solid;
     border-color: #1b1464;
+    width: 100%;
 }
 .logo {
     height: 100px;
     width: 100px;
 }
 .logo2 {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 }
 .lien {
     height: 100px;
@@ -32,6 +30,11 @@ main {
 }
 .img1 {
     height: 820px;
+}
+@media screen and (max-width: 768px) {
+    .img1 {
+        height: 600px;
+    }
 }
 nav ul {
     list-style: none;
@@ -52,13 +55,7 @@ nav li:last-child {
     margin-right: 0;
     padding-right: 0;
 }
-.t-parent {
-    position: relative;
-}
-.text-img {
-    position: absolute;
-    background-color: transparent;
-}
+
 .t-img {
     background-color: transparent;
     border: none;
@@ -70,15 +67,25 @@ nav li:last-child {
     width: 100%;
     height: 65px;
     background-color: white;
+    left: 0;
     opacity: 0.8;
     top: 0;
 }
 .bouton {
     border-radius: 50px;
-    width: 75%;
+    width: 250px;
     border: none;
     background-color: #1b1464;
     color: white; /* Couleur de texte */
+    padding: 10px 20px; /* Espacement intérieur */
+    opacity: 1;
+}
+.bouton2 {
+    border-radius: 50px;
+    width: 75%;
+    border: none;
+    background-color: white;
+    color: #1b1464; /* Couleur de texte */
     padding: 10px 20px; /* Espacement intérieur */
     opacity: 1;
 }
@@ -87,15 +94,55 @@ div {
     margin: auto;
     text-align: center;
 }
-.p-t-i {
-    font-size: 20pt;
+.card-magazin {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
 }
+
 .p-t-h {
-    font-size: 30pt;
+    width: 30%;
+    font-size: 3em;
+    text-align: center;
 }
-.inf {
-    width: 500px;
+
+.p-t-i {
+    width: 30%;
+    font-size: 1em;
+    text-align: justify;
+    margin: 1em;
 }
+
+.bouton-magazin {
+    width: 10%;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    margin: 1em;
+}
+
+@media screen and (max-width: 768px) {
+    .card-magazin {
+        align-items: center;
+    }
+    .p-t-h {
+        width: 100%;
+        font-size: 2em;
+    }
+    .p-t-i {
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .bouton-magazin {
+        font-size: 0.8em;
+        padding: 0.3em 0.7em;
+        width: 30%;
+    }
+}
+
 .ombre {
     box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.2);
     margin-bottom: 40px;
@@ -103,4 +150,48 @@ div {
 a {
     text-decoration: none;
     color: #1b1464;
+}
+.social-buttons a {
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 18px;
+    width: 10px;
+    height: 10px;
+    color: #1b1464;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 8px;
+}
+.social-buttons a::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: #1b1464;
+    border-radius: 50%;
+}
+.separateur {
+    border-top: 1px solid #1b1464;
+    margin: 20px auto;
+    width: 80px;
+}
+.separateur2 {
+    border-left: 1px solid #1b1464;
+    margin: auto 20px;
+    height: 60px;
+}
+.navx a {
+    color: #1b1464;
+}
+.separateur3 {
+    border-top: 1px solid #1b1464;
+    margin: 60px auto;
+    width: 40%;
+}
+.bg-i {
+    width: 100%;
+    height: 100%;
 }

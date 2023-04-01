@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class acceuilController extends Controller
+class welcomeController extends Controller
 {
     public function affiche()
     {
-        return view('acceuil');
+        return view('welcome');
     }
 }
