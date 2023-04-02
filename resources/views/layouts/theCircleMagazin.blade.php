@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="{{asset('css/acceuil.css')}}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">    
-<link rel="stylesheet" type="text/css" href="{{asset('css/welcome.css')}}">
+
 
 
 <head>
@@ -68,9 +68,9 @@
             
                    
                                 <nav class="nav nav-pills nav-fill navx p-5">
-                                    <a class="nav-item nav-link" href="#">L’EMISSION</a>
+                                    <a class="nav-item nav-link" href="{{route('lemission')}}">L’EMISSION</a>
                                     <div class="separateur2"></div>
-                                    <a class="nav-item nav-link" href="#">LES DOSSIERS</a>
+                                    <a class="nav-item nav-link" href="{{route('lesdossiers')}}">LES DOSSIERS</a>
                                     <div class="separateur2"></div>
                                     <a class="nav-item nav-link" href="#">L’ENTRETIEN</a>
                                     <div class="separateur2"></div>

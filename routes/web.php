@@ -5,6 +5,8 @@ use App\Http\Controllers\welcomeController;
 use App\Http\Controllers\quiSommesNousController;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\contacterNousController;
+use App\Http\Controllers\lemissionController;
+use App\Http\Controllers\lesDossiersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,8 @@ use App\Http\Controllers\contacterNousController;
 route::get('/', [welcomeController::class, 'affiche'])->name('welcome');
 route::get('/quiSommesNous', [quiSommesNousController::class, 'affiche'])->name('quiSommesNous');
 route::get('/contacterNous', [contacterNousController::class, 'affiche'])->name('contacterNous');
+route::get('/lemission', [lemissionController::class, 'affiche'])->name('lemission');
+route::get('/lesDossiers', [lesdossiersController::class, 'affiche'])->name('lesdossiers');
 route::get('languageConverter/{locale}', function ($locale) {
     if (in_array($locale, ['ar', 'en'])) {
         session()->put('locale', $locale);

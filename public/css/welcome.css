@@ -1,16 +1,21 @@
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 .slide-container {
-    max-width: 1120px;
-    width: 100%;
-    height: 350px;
+    width: 60%;
 }
-
-swiper-container {
-    width: 80%;
+.homepub1 {
+    width: 100%;
     height: 100%;
-    margin: 20px auto;
+}
+.navhome a {
+    text-decoration: none;
+    color: #1b1464;
+}
+.swiper-slide .card {
+    margin-top: 5px;
+    box-shadow: 3px 3px 3px #888888;
+}
+@media only screen and (max-width: 768px) {
+    /* CSS rules for screens smaller than 768px */
+    .slide-container {
+        width: 100%;
+    }
 }
