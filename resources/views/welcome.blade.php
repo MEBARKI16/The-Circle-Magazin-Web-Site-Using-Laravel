@@ -1,6 +1,24 @@
 @extends('./layouts/theCircleMagazin')
 @section('content')
 <section class="section">
+  <style>
+  
+    
+    .swiper {
+      width: 80%;
+      height: 370px;
+      margin:50px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background-color:transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
     <h2
       class="section__title"
       style="  margin-top: 50px;
@@ -133,164 +151,462 @@
     margin: 40px auto;
     width: 5%;"
     ></div>
-    <div class="slide-container">
-      <swiper-container id="news-home">
-        <div class="swiper-slide">  <div class="card" style="width: 80%;">
-          <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="swiper mySwiper-lemission1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="height:100%;width:70%">
+          <div class="card dossier" style="width: 70%;height: 100%;">
+            <div class="card-image">
+              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
             </div>
-          </div></div>
-              <div class="swiper-slide">  <div class="card" style="width: 80%">
-                <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div></div>
-                <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div></div>
-                  <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                    <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div></div>
-                    <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                      <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div></div>
-                      <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                          <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          </div>
-                        </div></div>
-      </swiper-container>
 
-      <div class="swiper-pagination"></div>
-    </div>
+            <div class="card-body card-body-dossier">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div
+                class="btn xx"
+                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+              >
+                en savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="height:100%">
+          <div class="card dossier" style="width: 80%;height: 100%;">
+            <div class="card-image">
+              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+            </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+            <div class="card-body card-body-dossier">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div
+                class="btn xx"
+                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+              >
+                en savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="height:100%">
+          <div class="card dossier" style="width: 80%;height: 100%;">
+            <div class="card-image">
+              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+            </div>
 
-    <script>
-      const swiperElnews = document.getElementById("news-home");
+            <div class="card-body card-body-dossier">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div
+                class="btn xx"
+                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+              >
+                en savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="height:100%">
+          <div class="card dossier" style="width: 80%;height: 100%;">
+            <div class="card-image">
+              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+            </div>
 
-      Object.assign(swiperElnews, {
-        slidesPerView: 4,
-        slidesPerGroup: 1,
-        centeredSlides: true,
-        spaceBetween: 10,
-        pagination: {},
-        navigation: {
-          nextEl: ".swiper-button-next-news",
-          prevEl: ".swiper-button-prev-news"
-        },
-        breakpoints: {
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 5
-    },
-    576: {
-      slidesPerView: 1,
-      spaceBetween: 0
-    }
+            <div class="card-body card-body-dossier">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div
+                class="btn xx"
+                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+              >
+                en savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="height:100%">
+          <div class="card dossier" style="width: 80%;height: 100%;">
+            <div class="card-image">
+              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+            </div>
+
+            <div class="card-body card-body-dossier">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div
+                class="btn xx"
+                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+              >
+                en savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="height:100%">
+          <div class="card dossier" style="width: 80%;height: 100%;">
+            <div class="card-image">
+              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+            </div>
+
+            <div class="card-body card-body-dossier">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div
+                class="btn xx"
+                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+              >
+                en savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="height:100%">
+          <div class="card dossier" style="width: 80%;height: 100%;">
+            <div class="card-image">
+              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+            </div>
+
+            <div class="card-body card-body-dossier">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div
+                class="btn xx"
+                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+              >
+                en savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="height:100%">
+          <div class="card dossier" style="width: 80%;height: 100%;">
+            <div class="card-image">
+              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+            </div>
+
+            <div class="card-body card-body-dossier">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div
+                class="btn xx"
+                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+              >
+                en savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide" style="height:100%">
+          <div class="card dossier" style="width: 80%;height: 100%;">
+            <div class="card-image">
+              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+            </div>
+
+            <div class="card-body card-body-dossier">
+              <p>
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <div
+                class="btn xx"
+                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+              >
+                en savoir plus
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiperlemission = new Swiper(".mySwiper-lemission1", {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      },
+      breakpoints: {
+  768: {
+    slidesPerView: 3,
+    spaceBetween: 30
+  },
+  576: {
+    slidesPerView: 2,
+    spaceBetween: 0
+  },
+  200: {
+    slidesPerView: 1,
+    spaceBetween: 0
   }
-      });
-
-      swiperElnews.initialize();
-    </script>
+}
+   
+    });
+  </script>
   </section>
   <section>
     <h2
       class="section__title"
       style="  margin-top: 50px;
-    color: #009FE3;"
+    color: #009933;"
     >
       LES DOSSIERS
     </h2>
     <div
-      style="  border-top: 1px solid #009FE3;
+      style="  border-top: 1px solid #009933;
   margin: 40px auto;
   width: 5%;"
     ></div>
-    <div class="slide-container">
-      <swiper-container id="dossier-home">
-        <div class="swiper-slide">  <div class="card" style="width: 80%;">
-          <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div></div>
-              <div class="swiper-slide">  <div class="card" style="width: 80%">
-                <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="swiper mySwiper-home-dossier">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="height:100%">
+            <div class="card dossier" style="width: 80%;height: 100%;">
+              <div class="card-image">
+                <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+              </div>
+
+              <div class="card-body card-body-dossier color-dossier">
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div
+                  class="btn xx"
+                  style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                >
+                  en savoir plus
                 </div>
-              </div></div>
-                <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height:100%">
+              <div class="card dossier" style="width: 80%;height: 100%;">
+                <div class="card-image">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                </div>
+  
+                <div class="card-body card-body-dossier color-dossier">
+                  <p>
+                    Some quick example text to build on the card title and make up
+                    the bulk of the card's content.
+                  </p>
+                  <div
+                    class="btn xx"
+                    style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                  >
+                    en savoir plus
                   </div>
-                </div></div>
-                  <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                    <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style="height:100%">
+                <div class="card dossier" style="width: 80%;height: 100%;">
+                  <div class="card-image">
+                    <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                  </div>
+    
+                  <div class="card-body card-body-dossier color-dossier">
+                    <p>
+                      Some quick example text to build on the card title and make up
+                      the bulk of the card's content.
+                    </p>
+                    <div
+                      class="btn xx"
+                      style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                    >
+                      en savoir plus
                     </div>
-                  </div></div>
-                    <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                      <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height:100%">
+                  <div class="card dossier" style="width: 80%;height: 100%;">
+                    <div class="card-image">
+                      <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                    </div>
+      
+                    <div class="card-body card-body-dossier color-dossier">
+                      <p>
+                        Some quick example text to build on the card title and make up
+                        the bulk of the card's content.
+                      </p>
+                      <div
+                        class="btn xx"
+                        style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                      >
+                        en savoir plus
                       </div>
-                    </div></div>
-                      <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                          <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" style="height:100%">
+                    <div class="card dossier" style="width: 80%;height: 100%;">
+                      <div class="card-image">
+                        <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                      </div>
+        
+                      <div class="card-body card-body-dossier color-dossier">
+                        <p>
+                          Some quick example text to build on the card title and make up
+                          the bulk of the card's content.
+                        </p>
+                        <div
+                          class="btn xx"
+                          style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                        >
+                          en savoir plus
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide" style="height:100%">
+                      <div class="card dossier" style="width: 80%;height: 100%;">
+                        <div class="card-image">
+                          <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                        </div>
+          
+                        <div class="card-body card-body-dossier color-dossier">
+                          <p>
+                            Some quick example text to build on the card title and make up
+                            the bulk of the card's content.
+                          </p>
+                          <div
+                            class="btn xx"
+                            style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                          >
+                            en savoir plus
                           </div>
-                        </div></div>
-      </swiper-container>
-
-      <div class="swiper-pagination"></div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-
-    <script>
-      const swiperEldossier = document.getElementById("dossier-home");
-
-      Object.assign(swiperEldossier, {
-        slidesPerView: 4,
-        slidesPerGroup: 1,
-        centeredSlides: true,
-        spaceBetween: 10,
-        pagination: {},
-        navigation: {
-          nextEl: ".swiper-button-next-dossier",
-          prevEl: ".swiper-button-prev-dossier"
-        },
-        breakpoints: {
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 5
-    },
-    576: {
-      slidesPerView: 1,
-      spaceBetween: 0
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="height:100%">
+                        <div class="card dossier" style="width: 80%;height: 100%;">
+                          <div class="card-image">
+                            <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                          </div>
+            
+                          <div class="card-body card-body-dossier color-dossier">
+                            <p>
+                              Some quick example text to build on the card title and make up
+                              the bulk of the card's content.
+                            </p>
+                            <div
+                              class="btn xx"
+                              style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                            >
+                              en savoir plus
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide" style="height:100%">
+                          <div class="card dossier" style="width: 80%;height: 100%;">
+                            <div class="card-image">
+                              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                            </div>
+              
+                            <div class="card-body card-body-dossier color-dossier">
+                              <p>
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                              </p>
+                              <div
+                                class="btn xx"
+                                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                              >
+                                en savoir plus
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" style="height:100%">
+                            <div class="card dossier" style="width: 80%;height: 100%;">
+                              <div class="card-image">
+                                <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                              </div>
+                
+                              <div class="card-body card-body-dossier color-dossier">
+                                <p>
+                                  Some quick example text to build on the card title and make up
+                                  the bulk of the card's content.
+                                </p>
+                                <div
+                                  class="btn xx"
+                                  style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                                >
+                                  en savoir plus
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+      </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+      <!-- Initialize Swiper -->
+      <script>
+        var swiperhomenews = new Swiper(".mySwiper-home-dossier", {
+          slidesPerView: 3,
+          spaceBetween: 0,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+          },
+          breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 0
+      },
+      200: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      }
     }
-  }
-      });
-
-      swiperEldossier.initialize();
-    </script>
+       
+        });
+      </script>
     <div class="card" style="width:60%;height:300px;margin-top:50px;margin-bottom:50px">
       <img src="{{asset('img/pubhome2.png')}}" class="card-img homepub1" alt="...">
       </div>
@@ -308,80 +624,227 @@
       margin: 40px auto;
       width: 5%;"
     ></div>
-    <div class="slide-container" style="margin-bottom:50px">
-      <swiper-container id="entretien-home">
-        <div class="swiper-slide">  <div class="card" style="width: 80%;">
-        <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div></div>
-            <div class="swiper-slide">  <div class="card" style="width: 80%">
-              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-              <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="swiper mySwiper-home-lentretien">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="height:100%">
+            <div class="card dossier" style="width: 80%;height: 100%;">
+              <div class="card-image">
+                <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
               </div>
-            </div></div>
-              <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+              <div class="card-body card-body-dossier color-entretien">
+                <p>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+                <div
+                  class="btn xx"
+                  style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                >
+                  en savoir plus
                 </div>
-              </div></div>
-                <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" style="height:100%">
+              <div class="card dossier" style="width: 80%;height: 100%;">
+                <div class="card-image">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                </div>
+  
+                <div class="card-body card-body-dossier color-entretien">
+                  <p>
+                    Some quick example text to build on the card title and make up
+                    the bulk of the card's content.
+                  </p>
+                  <div
+                    class="btn xx"
+                    style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                  >
+                    en savoir plus
                   </div>
-                </div></div>
-                  <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                    <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide" style="height:100%">
+                <div class="card dossier" style="width: 80%;height: 100%;">
+                  <div class="card-image">
+                    <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                  </div>
+    
+                  <div class="card-body card-body-dossier color-entretien">
+                    <p>
+                      Some quick example text to build on the card title and make up
+                      the bulk of the card's content.
+                    </p>
+                    <div
+                      class="btn xx"
+                      style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                    >
+                      en savoir plus
                     </div>
-                  </div></div>
-                    <div class="swiper-slide">  <div class="card" style="width: 80%;">
-                        <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height:100%">
+                  <div class="card dossier" style="width: 80%;height: 100%;">
+                    <div class="card-image">
+                      <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                    </div>
+      
+                    <div class="card-body card-body-dossier color-entretien">
+                      <p>
+                        Some quick example text to build on the card title and make up
+                        the bulk of the card's content.
+                      </p>
+                      <div
+                        class="btn xx"
+                        style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                      >
+                        en savoir plus
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" style="height:100%">
+                    <div class="card dossier" style="width: 80%;height: 100%;">
+                      <div class="card-image">
+                        <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                      </div>
+        
+                      <div class="card-body card-body-dossier color-entretien">
+                        <p>
+                          Some quick example text to build on the card title and make up
+                          the bulk of the card's content.
+                        </p>
+                        <div
+                          class="btn xx"
+                          style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                        >
+                          en savoir plus
                         </div>
-                      </div></div>
-                  
-      </swiper-container>
-
-      <div class="swiper-pagination"></div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-
-    <script>
-      const swiperElentretien = document.getElementById("entretien-home");
-
-      Object.assign(swiperElentretien, {
-        slidesPerView: 4,
-        slidesPerGroup: 1,
-        centeredSlides: true,
-        spaceBetween: 10,
-        pagination: {},
-        navigation: {
-          nextEl: ".swiper-button-next-entretien",
-          prevEl: ".swiper-button-prev-entretien"
-        },
-   
-        breakpoints: {
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 5
-    },
-    576: {
-      slidesPerView: 1,
-      spaceBetween: 0
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide" style="height:100%">
+                      <div class="card dossier" style="width: 80%;height: 100%;">
+                        <div class="card-image">
+                          <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                        </div>
+          
+                        <div class="card-body card-body-dossier color-entretien">
+                          <p>
+                            Some quick example text to build on the card title and make up
+                            the bulk of the card's content.
+                          </p>
+                          <div
+                            class="btn xx"
+                            style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                          >
+                            en savoir plus
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="height:100%">
+                        <div class="card dossier" style="width: 80%;height: 100%;">
+                          <div class="card-image">
+                            <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                          </div>
+            
+                          <div class="card-body card-body-dossier color-entretien">
+                            <p>
+                              Some quick example text to build on the card title and make up
+                              the bulk of the card's content.
+                            </p>
+                            <div
+                              class="btn xx"
+                              style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                            >
+                              en savoir plus
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide" style="height:100%">
+                          <div class="card dossier" style="width: 80%;height: 100%;">
+                            <div class="card-image">
+                              <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                            </div>
+              
+                            <div class="card-body card-body-dossier color-entretien">
+                              <p>
+                                Some quick example text to build on the card title and make up
+                                the bulk of the card's content.
+                              </p>
+                              <div
+                                class="btn xx"
+                                style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                              >
+                                en savoir plus
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide" style="height:100%">
+                            <div class="card dossier" style="width: 80%;height: 100%;">
+                              <div class="card-image">
+                                <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="..." />
+                              </div>
+                
+                              <div class="card-body card-body-dossier color-entretien">
+                                <p>
+                                  Some quick example text to build on the card title and make up
+                                  the bulk of the card's content.
+                                </p>
+                                <div
+                                  class="btn xx"
+                                  style="color:white;border:2px solid;border-color:white;font-weight: bold;opacity: 1;"
+                                >
+                                  en savoir plus
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+      </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    
+      <!-- Swiper JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    
+      <!-- Initialize Swiper -->
+      <script>
+        var swiperhomenews = new Swiper(".mySwiper-home-lentretien", {
+          slidesPerView: 3,
+          spaceBetween: 0,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+          },
+          breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 0
+      },
+      200: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      }
     }
-  }
-      });
-
-      swiperElentretien.initialize();
-    </script>
+       
+        });
+      </script>
     <nav class="nav navhome nav-pills flex-column flex-sm-row" style="width:60%;margin:auto">
       <a class="flex-sm-fill text-sm-center nav-link " href="#">FinTech</a>
       <a class="flex-sm-fill text-sm-center nav-link" href="#">InsurTech</a>
@@ -392,89 +855,101 @@
     <div class="conthome" style="height:600px;display:flex;border:none">
       <div class="card publeft" style="height:100%;width:15%">
         <img src="{{asset('img/lrpub.jpg')}}" class="card-img" style="width:100%;height:100%" alt="..."></div>
-      <div class="slide-container" style="width:60%;height:80%;background-color:#EEEDEA">
-        <swiper-container id="milieupub" style="height:100%;width:80%;margin:auto;background-color:#EEEDEA">
-          <div class="swiper-slide">  <div class="card" style="width: 90%;">
-          <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-          </div></div>
-              <div class="swiper-slide">  <div class="card" style="width: 90%">
-                <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-              </div></div>
-                <div class="swiper-slide">  <div class="card" style="width: 90%;">
+        <div class="swiper mySwiper-home-pubmilieu">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"> <div class="card" style="width: 80%;">
                   <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-                </div></div>
-                  <div class="swiper-slide">  <div class="card" style="width: 90%;">
-                    <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                   </div></div>
-                    <div class="swiper-slide">  <div class="card" style="width: 90%;">
-                      <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      </div>
-                    </div></div>
-                      <div class="swiper-slide">  <div class="card" style="width: 90%;">
-                          <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          </div>
-                        </div></div>
-                        <div class="swiper-slide">  <div class="card" style="width: 90%;">
-                          <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          </div>
-                        </div></div>
-                    
-        </swiper-container>
-  
-        <div class="swiper-pagination"></div>
-      </div>
-     
-    
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-    
-        <script>
-          const swiperElentretienpub = document.getElementById("milieupub");
-    
-          Object.assign(swiperElentretienpub, {
-            slidesPerView: 4,
-        slidesPerGroup: 1,
-        centeredSlides: true,
-        spaceBetween: 10,
-        pagination: {},
-        navigation: {
-          nextEl: ".swiper-button-next-milieupub",
-          prevEl: ".swiper-button-prev-milieupub"
-        },
-   
-        breakpoints: {
-    768: {
-      slidesPerView: 4,
-      spaceBetween: 5
-    },
-    576: {
-      slidesPerView: 1,
-      spaceBetween: 0
-    }
-  }
-       
-   
-          });
-    
-          swiperElentretienpub.initialize();
-        </script>
+              <div class="swiper-slide">  <div class="card" style="width: 80%;">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div></div>
+              <div class="swiper-slide"> <div class="card" style="width: 80%;">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div></div>
+              <div class="swiper-slide">  <div class="card" style="width: 80%;">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div></div>
+              <div class="swiper-slide">  <div class="card" style="width: 80%;">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div></div>
+              <div class="swiper-slide">  <div class="card" style="width: 80%;">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div></div>
+              <div class="swiper-slide">  <div class="card" style="width: 80%;">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div> </div>
+              <div class="swiper-slide">  <div class="card" style="width: 80%;">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div></div>
+              <div class="swiper-slide"> <div class="card" style="width: 80%;">
+                  <img src="{{asset('img/download.jpg')}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        
+          <!-- Swiper JS -->
+          <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        
+          <!-- Initialize Swiper -->
+          <script>
+            var swiperhomenews = new Swiper(".mySwiper-home-pubmilieu", {
+              slidesPerView: 3,
+              spaceBetween: 0,
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+              },
+              breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 0
+          },
+          200: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          }
+        }
+           
+            });
+          </script>
       <div class="card pubright" style="height:100%;width:15%">
         <img src="{{asset('img/lrpub.jpg')}}" class="card-img" style="width:100%;height:100%" alt="..."></div></div>
 
@@ -483,7 +958,7 @@
       <img src="{{asset('img/pubhome2.png')}}" class="card-img homepub1" alt="...">
       </div>
   </section>
-              <script src="{{asset('js/swiper-bundle.min.js')}}"></script>
-              <link href="{{asset('css/swiper-bundle.min.css')}}" rel="stylesheet">
+  <script src="{{asset('js/swiper-bundle.min.js')}}"></script>
+  <link href="{{asset('css/swiper-bundle.min.css')}}" rel="stylesheet">
               <link rel="stylesheet" type="text/css" href="{{asset('css/welcome.css')}}">
 @endsection

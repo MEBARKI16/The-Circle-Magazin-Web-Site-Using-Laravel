@@ -67,19 +67,43 @@
 
             
                    
-                                <nav class="nav nav-pills nav-fill navx p-5">
-                                    <a class="nav-item nav-link" href="<?php echo e(route('lemission')); ?>">L’EMISSION</a>
+                                <nav class="nav navhome nav-pills nav-fill navx p-5">
+                                    <a class="nav-item nav-link navhome1" href="<?php echo e(route('lemission')); ?>">L’EMISSION</a>
                                     <div class="separateur2"></div>
-                                    <a class="nav-item nav-link" href="<?php echo e(route('lesdossiers')); ?>">LES DOSSIERS</a>
+                                    <a class="nav-item nav-link navhome2" href="<?php echo e(route('lesdossiers')); ?>">LES DOSSIERS</a>
                                     <div class="separateur2"></div>
-                                    <a class="nav-item nav-link" href="#">L’ENTRETIEN</a>
+                                    <a class="nav-item nav-link navhome3" href="<?php echo e(route('lentretien')); ?>">L’ENTRETIEN</a>
                                     <div class="separateur2"></div>
-                                    <a class="nav-item nav-link " href="#">LES NEWS</a>
+                                    <a class="nav-item nav-link navhome4 " href="<?php echo e(route('lesnews')); ?>">LES NEWS</a>
                                     <div class="separateur2"></div>
-                                    <a class="nav-item nav-link " href="#">LES PODCASTS</a>
+                                    <a class="nav-item nav-link navhome5 " href="<?php echo e(route('lespodcasts')); ?>">LES PODCASTS</a>
                                     <div class="separateur2"></div>
-                                    <a class="nav-item nav-link " href="#">MENA - WORLD</a>
+                                    <a class="nav-item nav-link  navhome6" href="#">MENA - WORLD</a>
                                   </nav>
+                                  <script>
+                                  // Tableau de correspondance URL => couleur
+const colors = {
+  '/lemission': '#E63312',
+  '/lesDossiers': '#009933',
+  '/lentretien': '#009FE3',
+  '/lesnews': '#FF0066'
+};
+
+// Obtenir l'URL courant
+const currentUrl = window.location.pathname;
+
+// Récupérer les liens dans la navbar
+const links = document.querySelectorAll('.navhome a');
+console.log(links[0].getAttribute('href'));
+console.log(currentUrl);
+// Parcourir les liens et ajouter la couleur correspondante
+links.forEach(link => {
+  if (link.getAttribute('href').includes(currentUrl)) {
+    const color = colors[currentUrl];
+    link.style.color = color;
+  }
+});
+                                  </script>
                   </div>
                   <div class="card" style="width: 100%;border:none;background-color:#F5F5F5;">
                    <?php echo $__env->yieldContent('content'); ?>

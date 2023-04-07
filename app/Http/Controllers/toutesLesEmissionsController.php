@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class lesDossiersController extends Controller
+class toutesLesEmissionsController extends Controller
 {
     public function affiche()
     {
-        return view('lesdossiers');
+        return view('toutes-les-emissions');
     }
+
 }

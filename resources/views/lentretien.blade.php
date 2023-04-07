@@ -22,12 +22,12 @@
     <h2
       class="section__title"
       style="  margin-top: 50px;
-    color: #009933;"
+    color: #009FE3;"
     >
-    LES DOSSIERS
+    L’ENTRETIEN
     </h2>
     <div
-      style="  border-top: 1px solid #009933;
+      style="  border-top: 1px solid #009FE3;
     margin: 40px auto;
     width: 5%;"
     ></div>
@@ -456,10 +456,10 @@
        
         });
       </script>
-        <button type="button" class="btn btn-lg" style="width:30%;margin:50px 50px;background-color:#1b1464;color:white">Voir tous les dossiers</button>
+        <button type="button" class="btn btn-lg" style="width:30%;margin:50px 50px;background-color:#1b1464;color:white">Voir tous les entretiens</button>
   </section>
 
   <script src="{{asset('js/swiper-bundle.min.js')}}"></script>
   <link href="{{asset('css/swiper-bundle.min.css')}}" rel="stylesheet">
-  <link href="{{asset('css/lesdossiers.css')}}" rel="stylesheet">
+  <link href="{{asset('css/lentretien.css')}}" rel="stylesheet">
 @endsection

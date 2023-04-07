@@ -1,24 +1,3 @@
-.slide-container {
-    width: 60%;
-}
-.homepub1 {
-    width: 100%;
-    height: 100%;
-}
-.navhome a {
-    text-decoration: none;
-    color: #1b1464;
-}
-.swiper-slide .card {
-    margin-top: 5px;
-    box-shadow: 3px 3px 3px #888888;
-}
-@media only screen and (max-width: 768px) {
-    /* CSS rules for screens smaller than 768px */
-    .slide-container {
-        width: 100%;
-    }
-}
 .dossier {
     position: relative;
 
@@ -59,7 +38,7 @@
     left: 0;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #ff0066;
+    background-color: #009933;
     opacity: 0.7;
     transition: opacity 0.3s ease-in-out;
 }
@@ -76,10 +55,4 @@
     border-color: white;
 
     opacity: 1;
-}
-.dossier:hover .color-dossier {
-    background-color: #009933;
-}
-.dossier:hover .color-entretien {
-    background-color: #009fe3;
 }
